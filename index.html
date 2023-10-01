@@ -15,7 +15,6 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
-
   </head>
 
   <body>
@@ -25,27 +24,38 @@
           <div class="row">
             <div class="col-6">
               <input
-                class="form-control" id="city-input"
+                class="form-control"
+                id="city-input"
                 type="text"
                 placeholder="Type a city...."
                 aria-label="default input example"
               />
             </div>
             <div class="col-3">
-              <button type="button" class=" form-control btn btn-primary " id="search">Search</button>
+              <button
+                type="button"
+                class="form-control btn btn-primary"
+                id="search"
+              >
+                Search
+              </button>
             </div>
             <div class="col-3">
-              <button type="button" class=" form-control btn btn-success" id="current">Current</button>
+              <button
+                type="button"
+                class="form-control btn btn-success"
+                id="current"
+              >
+                Current
+              </button>
             </div>
           </div>
         </form>
-        <h1 class="head1" id="nameCity">
-          Sydney NSW, Australia
-        </h1>
+        <h1 class="head1" id="nameCity">Sydney NSW, Australia</h1>
         <p class="date" id="current-time">Wednesday 22:00</p>
         <p class="date" id="weather-state">Partly Cloudy</p>
 
-       <!---- <div class="last">
+        <!---- <div class="last">
           <div class="first">
             <p class="temp">19</p>
             <p class="degree"><a href="#" id="cel">°C</a></p>
@@ -63,22 +73,20 @@
           </div>
           <div class="col">
             <ul>
-              <li id="vis">
-                Visibility: 5000
-              </li>
-              <li id="hum">
-                Humidity: 77%
-              </li>
-              <li id="win">
-                Wind: 8 km/h
-              </li>
+              <li id="vis">Visibility: 5000</li>
+              <li id="hum">Humidity: 77%</li>
+              <li id="win">Wind: 8 km/h</li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-    <p class="source"><a href="https://github.com/lowlah/weather_app">open source code</a> by Omolola Oladeinde</p>
-    
+    <p class="source">
+      <a href="https://github.com/lowlah/weather_app" target="_blank"
+        >open source code</a
+      >
+      by Omolola Oladeinde
+    </p>
 
     <script src="src/index.js"></script>
   </body>
