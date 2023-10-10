@@ -27,7 +27,7 @@ function formatDate() {
 
 formatDate();
 
-let unit=document.querySelector("#search");
+let unit=document.querySelector("#submit-form");
 
 function displaySearch(event){
   event.preventDefault();
@@ -75,7 +75,11 @@ function displaySearch(event){
 
 
 }
-unit.addEventListener("click",displaySearch)
+
+unit.addEventListener("submit", displaySearch);
+let search = document.querySelector("#search");
+search.addEventListener("click", displaySearch);
+
 
 function displayLocation(){
   function getTemp(response) {
