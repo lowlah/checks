@@ -49,32 +49,26 @@ function displaySearch(event) {
     console.log(response.data);
     //console.log(response.data.main.temp);
     // change temperature by city
-    if (response.data.cod === "404") {
-      // City not found
-      alert("City not found. Please enter a valid city name.");
-    } else {
-      // Display weather data
-      // Your existing code for displaying weather
-      let temp = Math.round(response.data.main.temp);
-      let newWeather = document.querySelector(".temp");
-      newWeather.innerHTML = `${temp}`;
-      // change description by city
-      let descrip = response.data.weather[0].description;
-      let state = document.querySelector("#weather-state");
-      state.innerHTML = `${descrip}`;
-      // change humidity by city
-      let humid = document.querySelector("#hum");
-      let humValue = response.data.main.humidity;
-      humid.innerHTML = `Humidity: ${humValue}%`;
-      // change wind speed by city
-      let wind = document.querySelector("#win");
-      let windValue = Math.round(response.data.wind.speed);
-      wind.innerHTML = `Wind: ${windValue} km/h`;
-      // change visibility
-      let visibility = document.querySelector("#vis");
-      let visiValue = Math.round(response.data.main.feels_like);
-      visibility.innerHTML = `Feels like ${visiValue}°C`;
-    }
+
+    let temp = Math.round(response.data.main.temp);
+    let newWeather = document.querySelector(".temp");
+    newWeather.innerHTML = `${temp}`;
+    // change description by city
+    let descrip = response.data.weather[0].description;
+    let state = document.querySelector("#weather-state");
+    state.innerHTML = `${descrip}`;
+    // change humidity by city
+    let humid = document.querySelector("#hum");
+    let humValue = response.data.main.humidity;
+    humid.innerHTML = `Humidity: ${humValue}%`;
+    // change wind speed by city
+    let wind = document.querySelector("#win");
+    let windValue = Math.round(response.data.wind.speed);
+    wind.innerHTML = `Wind: ${windValue} km/h`;
+    // change visibility
+    let visibility = document.querySelector("#vis");
+    let visiValue = Math.round(response.data.main.feels_like);
+    visibility.innerHTML = `Feels like ${visiValue}°C`;
   }
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city2}&appid=${apiKey}&units=metric`;
